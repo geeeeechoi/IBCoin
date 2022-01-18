@@ -77,11 +77,12 @@ function gotResult(error, results) {
   label = results[0].label;
   confidence = results[0].confidence;
   //what i need to initiate a transaction
-  let shouldReward = true;
+  
   if (results[0].label == "thumbs up" && results[0].confidence > 0.97 && shouldReward){
 
-    // tokenWithSigner.reward(10);
+
     shouldReward = false;
+    tokenWithSigner.reward(10);
 
   }
   // Classifiy again!
