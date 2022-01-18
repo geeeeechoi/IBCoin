@@ -1,3 +1,56 @@
-h1{
-    color:purple;
-}
+@font-face {
+    font-family: bold;
+    src: url(./fonts/HelveticaNowforIB-MicroBold.otf);
+  }
+   
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  .IBertic-text{
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    font-family: bold;
+    color: #ffffff;
+
+
+  }
+
+  .ib-logo {
+      position: fixed;
+      bottom: 20px;
+      width:98%;
+
+  }
+
+
+  p {
+    font-size: 20px;
+    margin: 35px;
+    line-height: 0.3;
+  }
+  /* .unicorn-left{
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      width: 80%;
+
+  }
+
+  .unicorn-right {
+      position: fixed;
+      top: 300px;
+      right: 20px;
+      transform: scaleX(-1);
+
+  }
+
+   */

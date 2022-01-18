@@ -31,11 +31,11 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(320, 260);
+  let cnv = createCanvas(640, 480);
   cnv.parent("#sketch");
   // Create the video
   video = createCapture(VIDEO);
-  video.size(320, 240);
+  video.size(640, 480);
   video.hide();
 
   flippedVideo = ml5.flipImage(video)
@@ -62,6 +62,7 @@ function classifyVideo() {
 }
 
 // When we get a result
+let shouldReward = true;
 function gotResult(error, results) {
   // If there is an error
   if (error) {
@@ -79,7 +80,7 @@ function gotResult(error, results) {
   let shouldReward = true;
   if (results[0].label == "thumbs up" && results[0].confidence > 0.97 && shouldReward){
 
-    tokenWithSigner.reward(10);
+    // tokenWithSigner.reward(10);
     shouldReward = false;
 
   }
